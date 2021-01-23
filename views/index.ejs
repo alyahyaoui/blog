@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Yonko Blog</title>
+	</head>
+	<body>
+		<h1>Welcome to my blog</h1>
+		<p>you are invited to read, comment and even post in my blog</p>
+		<form action="/compose" method="post">
+			<label for="article-title">Title</label><br />
+			<input
+				id="article-title"
+				type="text"
+				required
+				autocomplete="off"
+				autofocus
+				name="title"
+			/><br />
+			<label for="article-body">Article</label><br />
+			<textarea
+				id="article-body"
+				type="text"
+				required
+				autocomplete="off"
+				name="description"
+				rows="24"
+				cols="80"
+			>
+put some text here ...</textarea
+			><br />
+			<button type="submit">Publish</button>
+		</form>
+	</body>
+</html>
