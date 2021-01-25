@@ -6,7 +6,7 @@ router
 	.get('/', (req, res) => {
 		//sending index.html to the client once a get request received
 
-		res.render('index');
+		res.render('compose');
 	})
 	.post('/', (req, res, next) => {
 		const article = new Article({

@@ -1,7 +1,7 @@
 require('dotenv').config(); // module used tp save sensetive data in the process
 const express = require('express'); //backend framework
 const mongoose = require('mongoose'); // import the mongoose module for mongoDB
-const compose = require('./controller/compose');
+const compose = require('./routes/compose');
 const ejs = require('ejs');
 const app = express();
 const Article = require('./model/article');
@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 	//sending index.html to the client once a get request received
 	Article.find({}, (err, result) => {
 		if (err) console.log(err);
-		res.render('show', { data: result });
+		res.render('index', { data: result });
 	});
 });
 

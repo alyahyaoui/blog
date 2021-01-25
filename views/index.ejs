@@ -3,34 +3,36 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Yonko Blog</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+			crossorigin="anonymous"
+		/>
+		<title>blog</title>
 	</head>
 	<body>
-		<h1>Welcome to my blog</h1>
-		<p>you are invited to read, comment and even post in my blog</p>
-		<form action="/compose" method="post">
-			<label for="article-title">Title</label><br />
-			<input
-				id="article-title"
-				type="text"
-				required
-				autocomplete="off"
-				autofocus
-				name="title"
-			/><br />
-			<label for="article-body">Article</label><br />
-			<textarea
-				id="article-body"
-				type="text"
-				required
-				autocomplete="off"
-				name="description"
-				rows="24"
-				cols="80"
-			>
-put some text here ...</textarea
-			><br />
-			<button type="submit">Publish</button>
-		</form>
+
+		<div class="container">
+			<h1 class="text-primary display-1 text-center card shadow rounded">
+				Welcome the personal blog of Ali Yahyaoui
+      </h1>
+      <div class="btn-group" role="group" aria-label="Basic example">
+      <a class="btn btn-outline-primary" href="/compose">New article</a>
+    </div>
+      
+			<% data.reverse().forEach(data => { %>
+				<div class="card shadow p-3 mb-5 bg-white rounded mt-5">
+			<h1 class="text-primary"><%= data.title %></h1>
+			<p class="h6 mark"><%= data.description %></p>
+			<p class="text-muted small"><%= data.date %></p>
+			</div>
+			<% }) %>
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+			crossorigin="anonymous"
+		></script>
 	</body>
 </html>
