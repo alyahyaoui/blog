@@ -14,17 +14,17 @@
 	<body>
 
 		<div class="container">
-			<h1 class="text-primary display-1 text-center card shadow rounded">
-				Welcome the personal blog of Ali Yahyaoui
+			<h1 class="text-danger display-1 text-center ">
+				Welcome to my blog 
       </h1>
-      <div class="btn-group" role="group" aria-label="Basic example">
+    
       <a class="btn btn-outline-primary" href="/compose">New article</a>
-    </div>
+  
       
 			<% data.reverse().forEach(data => { %>
-				<div class="card shadow p-3 mb-5 bg-white rounded mt-5">
-			<h1 class="text-primary"><%= data.title %></h1>
-			<p class="h6 mark"><%= data.description %></p>
+				<div class="card shadow p-3 my-5 bg-white rounded ">
+			<h1 class="card-title"><%= data.title %></h1>
+			<p class="card-subtitle"><%= data.description %></p>
 			<p class="text-muted small"><%= data.date %></p>
 			</div>
 			<% }) %>

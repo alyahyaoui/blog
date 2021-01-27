@@ -12,8 +12,9 @@
 		/>
 	</head>
 	<body class="container">
-		<form action="/compose" method="post">
-
+		<h1 class="display-1 text-danger text-center">Write your article</h1>
+		<form  action="/compose" method="post">
+			<div class="form-group">
 			<label for="article-title" class="form-label">Title</label><br />
 			<input
 				id="article-title"
@@ -22,7 +23,7 @@
 				autocomplete="off"
 				autofocus
 				name="title"
-				class="form-control"
+				class="form-control form-control-lg"
 			/><br />
 			<label for="article-body" class="form-label">Article</label><br />
 			<textarea
@@ -36,7 +37,7 @@
 			>
 put some text here ...</textarea
 			><br />
-			<button type="submit" class="btn btn-lg btn-primary">Publish</button>
+			<button type="submit" class="btn btn-lg btn-primary">Publish</button></div>
 		</form>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
